@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:light_app/ui/home_page.dart';
 import 'package:light_app/ui/login_page.dart';
+import 'package:light_app/bloc/login_page_bloc.dart';
+import 'package:light_app/bloc/main/bloc_provider.dart';
 
 
 class Routes {
@@ -16,7 +18,10 @@ class Routes {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new LoginPage(),
+      home: BlocProvider<LoginPageBloc>(
+        bloc: LoginPageBloc(),
+        child: LoginPage(),
+      ),
       routes: routes,
     ));
   }

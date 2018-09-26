@@ -209,9 +209,7 @@ class _LoginPageState extends State<LoginPage>
   Widget _buildSignIn(BuildContext context) {
 
     LoginPageBloc bloc= BlocProvider.of<LoginPageBloc>(context);
-    return BlocProvider<LoginPageBloc>(
-      bloc: LoginPageBloc(),
-      child: Container(
+    return Container(
         padding: EdgeInsets.only(top: 23.0),
         child: Column(
           children: <Widget>[
@@ -445,8 +443,8 @@ class _LoginPageState extends State<LoginPage>
             ),
           ],
         ),
-      ),
-    );
+      );
+
   }
 
   Widget _buildSignUp(BuildContext context) {
